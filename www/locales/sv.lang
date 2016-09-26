@@ -1,0 +1,16 @@
+<?php
+// swedish language
+$lang["searchfor"]="Sök efter";
+$lang["searchfrom"]="Sök från";
+$lang["searchto"]="Sök till";
+$lang["search"]="Sök";
+$lang["statistics"]="Statistik";
+$lang["archivedinvoices"]="Indexerade fakturor";
+$lang["numberofsearches"]="Antal sökningar";
+$lang["hits"]="träffar";
+$lang["nohits"]="Inga träffar";
+$lang["invoice"]="Faktura";
+$lang["date"]="Datum";
+$lang["open"]="Öppna";
+$lang["download"]="Hämta";
+$lang["weekstart"]=1;

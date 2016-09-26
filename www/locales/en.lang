@@ -1,0 +1,16 @@
+<?php
+// english language
+$lang["searchfor"]="Search for";
+$lang["searchfrom"]="Search from";
+$lang["searchto"]="Search to";
+$lang["search"]="Search";
+$lang["statistics"]="Statistics";
+$lang["archivedinvoices"]="Indexed invoices";
+$lang["numberofsearches"]="Number of searches";
+$lang["hits"]="hits";
+$lang["nohits"]="No hits";
+$lang["invoice"]="Invoice";
+$lang["date"]="Date";
+$lang["open"]="Open";
+$lang["download"]="Download";
+$lang["weekstart"]=0;

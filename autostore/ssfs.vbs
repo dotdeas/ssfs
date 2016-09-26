@@ -10,8 +10,7 @@
 ' Required strings (set in VB component)
 ' --------------------------------------
 ' strDbtable => database table to use
-' strFileid => fileidentifier
-' strDate => todays date (format: yyyy-mm-dd)
+' strFileid => fileidentifier/name
 ' strOcrdata => filtered ocr data from ocr and data filter components
 '
 
@@ -30,6 +29,8 @@ Sub ssfsplugin_OnLoad()
 	strDbpass = ""
 
 	On Error Resume Next
+
+	strDate = Year(Now())&"-"&Month(Now())&"-"&Day(Now())
 
 	writelog("Connecting to mysql server ...")
 	Set conn = CreateObject("ADODB.Connection")

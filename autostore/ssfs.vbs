@@ -8,7 +8,6 @@
 '
 ' Required strings (set in VB component)
 ' --------------------------------------
-' strDbtable => database table to use
 ' strFileid => fileidentifier/name
 ' strOcrdata => filtered ocr data from ocr and data filter components
 '
@@ -36,15 +35,14 @@ Sub ssfsplugin_OnLoad()
 	conn.Open "Driver="+strDbdriver+";Server="+strDbhost+";Database="+strDbname+";Uid="+strDbuser+";Password="+strDbpass
 	If conn.state = "1" Then
 		writelog("Connected to mysql server")
-		writelog("Using archive '"+strDbtable+"'")
 		Set rs = CreateObject("ADODB.Recordset")
-		Set rs = conn.Execute("SELECT COUNT(fileid) FROM "+strDbtable+" WHERE fileid='"+strFileid+"'")
+		Set rs = conn.Execute("SELECT COUNT(fileid) FROM archive WHERE fileid='"+strFileid+"'")
 		If rs("count(fileid)")<>"0" Then
 			writelog("Record allready exists, updating record ...")
-			Set rs = conn.Execute("UPDATE "+strDbtable+" SET filedata='"+strOcrdata+"' WHERE fileid='"+strBarcode+"'")
+			Set rs = conn.Execute("UPDATE archive SET filedata='"+strOcrdata+"' WHERE fileid='"+strBarcode+"'")
 		Else
 			writelog("Inserting record to database ...")
-			Set rs = conn.Execute("INSERT INTO "+strDbtable+" (fileid,filedate,filedata) VALUES ('"+strFileid+"','"+strDate+"','"+strOcrdata+"')")
+			Set rs = conn.Execute("INSERT INTO archive (fileid,filedate,filedata) VALUES ('"+strFileid+"','"+strDate+"','"+strOcrdata+"')")
 		End If
 		writelog("Disconnecting from mysql server ...")
 		Set rs = Nothing

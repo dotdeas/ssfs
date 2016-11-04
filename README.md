@@ -11,8 +11,8 @@ AutoStore project to simplify invoice scanning and retrieval
 * MySQL Connector/ODBC Driver 5.3 or later
 
 ## Language support
-* English
-* Swedish
+* English (en)
+* Swedish (sv)
 
 ## Download
 You can download the newest release at http://github.com/dotdeas/ssfs/releases/
@@ -22,7 +22,11 @@ If you prefer to follow the git repository, the following branch and tag names m
 * ``trunk`` is the development branch
 
 ## Installation
-Coming soon
+1. Copy all the files from the www-dir to your webserver
+2. Import ssfs_mysql.sql to you mysql server
+3. Edit config.php located in to match your setup
+4. Open the example config in Autostore and modify to match your setup
+5. Edit the ssfs vbscript database config
 
 ## What does 'SSFS' stands for?
 In swedish it stands for "Sattans Snabb Faktura Sökning", translated into english that would be something like "Quick As Hell Invoice Search"
